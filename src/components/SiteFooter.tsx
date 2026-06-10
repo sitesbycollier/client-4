@@ -86,6 +86,16 @@ export const SiteFooter = () => {
             Reserved.
             <br />
             Founded February 8, 1951 &middot; Hot Springs, Arkansas
+            <br />
+            {" "}Design by{" "}
+            <a
+              href="https://sitesbycollier.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:opacity-80"
+            >
+              Sites By Collier
+            </a>
           </p>
         </div>
       </div>
