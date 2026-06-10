@@ -174,8 +174,8 @@ const ApplicationDownload = () => (
         Download 2026 Scholarship Application
       </a>
       <p className="text-cream/35 text-xs mt-5 font-source_sans_pro">
-        .DOCX format &middot; Questions? Contact Sheree O&#39;Rorke at
-        2kidos@gmail.com
+        .DOCX format &middot; Questions? Contact Tom Bolton at
+        tbolton728@gmail.com
       </p>
     </div>
   </section>
