@@ -269,9 +269,11 @@ const PresidentBio = () => (
       <div className="md:flex gap-12 items-start">
         <div className="md:w-64 shrink-0 mb-8 md:mb-0">
           <div className="bg-cream-dark border-t-4 border-burgundy p-6 text-center">
-            <div className="w-24 h-24 rounded-full bg-navy/10 flex items-center justify-center mx-auto mb-4">
-              <span className="font-playfair text-4xl text-navy/40">T</span>
-            </div>
+            <img
+              src="./assets/images/Tom.png"
+              alt="Dr. Tom Bolton"
+              className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-gold/20"
+            />
             <h3 className="font-playfair text-xl text-navy mb-1">
               Dr. Tom Bolton
             </h3>
@@ -333,21 +335,11 @@ const PresidentBio = () => (
             In retirement he has taught voice as well as music and worship
             classes at Ouachita Baptist University and Champion Christian
             College. He has served as Minister of Music at Lake Hamilton Baptist
-            Church since 2015 and has been the musical director of The Village
-            Chorale in Hot Springs Village since 2018. He has been president of
+            Church since 2015 and was the musical director of The Village
+            Chorale in Hot Springs Village from 2018 to 2026. He has been president of
             Hot Springs Music Connection since 2021, and was appointed by the
             Hot Springs City Council to the Arts Advisory Committee for the city
             of Hot Springs.
-          </p>
-          <p>
-            His career as choral director began in 1969 and continues today. He
-            has directed choirs of all ages — children&#39;s choirs, youth
-            choirs, adult church choirs, university choirs, seminary choirs, and
-            now an auditioned community choir. Having been a voice teacher for
-            half a century, his approach to choral directing stresses correct,
-            unified vocal production combined with careful attention to musical
-            nuances, resulting in a choral art that communicates not only to the
-            ears of an audience, but to their collective hearts and minds.
           </p>
         </div>
       </div>
