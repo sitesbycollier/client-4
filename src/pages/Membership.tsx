@@ -124,7 +124,7 @@ export const Membership = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="./assets/docs/HSMC_Annual_Membership_Form.docx"
+                href="assets/docs/HSMC_Annual_Membership_Form.docx"
                 download="HSMC-Membership-Application.docx"
                 className="inline-flex items-center gap-2.5 bg-black hover:bg-neutral-800 text-white font-source_sans_pro text-sm tracking-wide uppercase px-8 py-3.5 rounded-lg transition-colors shadow"
               >
