@@ -1,3 +1,5 @@
+import { usePageMeta } from "@/hooks/usePageMeta";
+
 const PIANO_TEACHERS = [
   {
     name: "Kristen Bomberger",
@@ -47,12 +49,6 @@ const INSTRUMENTAL_TEACHERS = [
     name: "Kristen Bomberger",
     email: "kbbomberger@gmail.com",
     phones: ["(501) 463-1475"],
-  },
-  {
-    instrument: "Violin",
-    name: "Dr. James Arthur Smith",
-    email: "jamesarthursmith@gmail.com",
-    phones: ["(501) 525-1127"],
   },
 ];
 
@@ -197,12 +193,19 @@ const ListYourself = () => (
   </section>
 );
 
-export const Education = () => (
-  <div>
-    <PageHero />
-    <Intro />
-    <PianoTeachers />
-    <InstrumentalTeachers />
-    <ListYourself />
-  </div>
-);
+export const Education = () => {
+  usePageMeta({
+    title: "Music Education",
+    description:
+      "Find qualified piano and instrumental music teachers in the Hot Springs area. Hot Springs Music Connection connects students with experienced local instructors.",
+  });
+  return (
+    <div>
+      <PageHero />
+      <Intro />
+      <PianoTeachers />
+      <InstrumentalTeachers />
+      <ListYourself />
+    </div>
+  );
+};

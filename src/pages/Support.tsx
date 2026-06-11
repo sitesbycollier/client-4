@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Star, Award, Users } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const PageHero = () => (
   <section
@@ -263,12 +264,19 @@ const LegacyGiving = () => (
   </section>
 );
 
-export const Support = () => (
-  <div>
-    <PageHero />
-    <WhySupport />
-    <DonationInfo />
-    <Sponsorships />
-    <LegacyGiving />
-  </div>
-);
+export const Support = () => {
+  usePageMeta({
+    title: "Support Us",
+    description:
+      "Support music education in Hot Springs by donating to Hot Springs Music Connection. Your gift directly funds scholarships for talented young musicians in Garland County.",
+  });
+  return (
+    <div>
+      <PageHero />
+      <WhySupport />
+      <DonationInfo />
+      <Sponsorships />
+      <LegacyGiving />
+    </div>
+  );
+};

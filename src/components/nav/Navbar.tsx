@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { to: "/scholarships", label: "Scholarships" },
   { to: "/support", label: "Support" },
   { to: "/education", label: "Education" },
+  { to: "/membership", label: "Membership" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -31,7 +32,7 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex flex-col leading-tight group">
               <span className="font-great_vibes text-4xl text-burgundy leading-none group-hover:text-burgundy-light transition-colors">
-                Hot Springs Music Club
+                Hot Springs Music Connection
               </span>
               <span className="text-navy/50 text-[10px] tracking-[0.25em] uppercase font-source_sans_pro mt-0.5">
                 Hot Springs, Arkansas

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Download, CheckCircle, Calendar, AlertCircle } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const PageHero = () => (
   <section
@@ -167,7 +168,8 @@ const ApplicationDownload = () => (
         additional copies for qualified students.
       </p>
       <a
-        href="https://irp.cdn-website.com/b6e33f4b/files/uploaded/Scholarship_App_2025.docx"
+        href="/assets/docs/Scholarship_App_2025.docx"
+        download="HSMC-Scholarship-Application.docx"
         className="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 text-white px-10 py-5 font-source_sans_pro tracking-wide transition-colors rounded-lg"
       >
         <Download size={19} />
@@ -238,12 +240,19 @@ const PastRecipients = () => (
   </section>
 );
 
-export const Scholarships = () => (
-  <div>
-    <PageHero />
-    <Letter />
-    <EligibilityAndDates />
-    <ApplicationDownload />
-    <PastRecipients />
-  </div>
-);
+export const Scholarships = () => {
+  usePageMeta({
+    title: "Scholarships",
+    description:
+      "Hot Springs Music Connection awards scholarships to Garland County students pursuing music degrees. Download the 2026 application and learn about audition requirements and deadlines.",
+  });
+  return (
+    <div>
+      <PageHero />
+      <Letter />
+      <EligibilityAndDates />
+      <ApplicationDownload />
+      <PastRecipients />
+    </div>
+  );
+};

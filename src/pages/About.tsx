@@ -1,3 +1,5 @@
+import { usePageMeta } from "@/hooks/usePageMeta";
+
 const PageHero = () => (
   <section
     className="relative py-32 flex items-center"
@@ -14,7 +16,7 @@ const PageHero = () => (
         Who We Are
       </p>
       <h1 className="font-playfair text-5xl md:text-6xl text-white mb-4 drop-shadow-lg">
-        About the Club
+        About Us
       </h1>
       <p className="text-white/80 text-lg leading-relaxed max-w-2xl font-source_sans_pro drop-shadow">
         A 75-year legacy of supporting music education and appreciating the arts
@@ -38,78 +40,163 @@ const History = () => (
       </div>
       <div className="space-y-6 text-navy/65 leading-relaxed">
         <p className="text-lg">
-          The Hot Springs Music Club was founded on{" "}
-          <strong className="text-navy">February 8, 1951</strong>, by community
-          members who believed deeply in the power of music to enrich lives and
-          strengthen community bonds.
+          Originally founded as The Hot Springs Music Club on{" "}
+          <strong className="text-navy">February 8, 1951</strong>, the club
+          changed its name to The Hot Springs Music Connection in 2025 to better
+          reflect its mission.
         </p>
         <p>
-          For more than seven decades, the club has served as a cornerstone of
-          musical life in Hot Springs, Arkansas — nurturing young talent,
-          sponsoring scholarship auditions, hosting performances, and fostering
-          greater appreciation of music in all its forms throughout Garland
-          County.
+          For more than seven decades, the organization has served as a
+          cornerstone of musical life in Hot Springs, Arkansas — nurturing young
+          talent, sponsoring scholarship auditions, hosting performances, and
+          fostering greater appreciation of music in all its forms throughout
+          Garland County.
         </p>
         <p>
-          The organization is not a performing ensemble — it is a music
-          education organization, a scholarship organization, a community arts
-          advocate, and a music appreciation society. At its heart, the club
-          exists to support local students and bring music to the Hot Springs
-          community.
+          We exist to celebrate and showcase a wide array of artistic music
+          styles both within and outside our organization while nurturing the
+          education of young musicians and the traditions of American music.
+          Everyone — whether a professional, amateur, educator, or arts
+          enthusiast — has a place here among kindred spirits in our Hot Springs
+          Music Connection.
         </p>
       </div>
     </div>
   </section>
 );
 
-const Timeline = () => (
-  <section className="bg-navy py-20">
+const NameChange = () => (
+  <section className="bg-white py-20">
     <div className="max-w-4xl mx-auto px-4">
       <div className="text-center mb-14">
-        <h2 className="font-playfair text-4xl text-cream mb-3">
-          A Legacy of Service
+        <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-3">
+          2025
+        </p>
+        <h2 className="font-playfair text-4xl text-navy mb-3">
+          A New Name — A New Vision
         </h2>
-        <div className="w-14 h-0.5 bg-gold mx-auto" />
+        <p className="font-playfair text-lg text-navy/50 italic">
+          A Message from President Dr. Tom Bolton
+        </p>
+        <div className="w-14 h-0.5 bg-gold mx-auto mt-4" />
       </div>
-      <div className="space-y-10">
-        {[
-          {
-            year: "1951",
-            event:
-              "Hot Springs Music Club founded on February 8, 1951 in Hot Springs, Arkansas — dedicated to supporting music education and appreciation.",
-          },
-          {
-            year: "1950s–70s",
-            event:
-              "The club establishes itself as a community institution, hosting recitals, member programs, and music appreciation events across Garland County.",
-          },
-          {
-            year: "1980s–90s",
-            event:
-              "Scholarship program formalized. Annual competitive auditions become the centerpiece of the club&#39;s mission to support aspiring young musicians.",
-          },
-          {
-            year: "2022",
-            event:
-              "Three scholarship recipients honored — Carlee McCrary, Catie Canu, and Jacob Happy — each awarded funding for their music studies.",
-          },
-          {
-            year: "2025",
-            event:
-              "The club continues its 75-year legacy, holding annual scholarship auditions at First United Methodist Church on Central Avenue.",
-          },
-        ].map(({ year, event }) => (
-          <div key={year} className="flex gap-8 items-start">
-            <div className="w-28 shrink-0 text-right">
-              <span className="font-playfair text-gold text-lg">{year}</span>
-            </div>
-            <div className="w-px bg-gold/30 self-stretch mt-2 shrink-0" />
-            <p
-              className="text-cream/65 leading-relaxed pt-1 text-sm"
-              dangerouslySetInnerHTML={{ __html: event }}
-            />
-          </div>
-        ))}
+
+      <div className="space-y-6 text-navy/65 leading-relaxed font-source_sans_pro">
+        <p className="text-lg font-playfair italic text-navy/80">
+          After 75 remarkable years of musical fellowship and service, the Hot
+          Springs Music Club has reached a defining moment — a time to embrace a
+          new identity that better reflects who we are, what we do, and where
+          we&#39;re going. We are proud to introduce our refreshed name: Hot
+          Springs Music Connection.
+        </p>
+
+        <h3 className="font-playfair text-2xl text-navy pt-2">
+          Why the Change?
+        </h3>
+        <p>
+          We wanted to update and &#34;refresh&#34; our self-image and the
+          public&#39;s perception of who we are. As we reflected on the somewhat
+          archaic word <em>club</em>, we were afraid it may conjure up the image
+          of a somewhat cliquish circle of friends who get together to take part
+          in a common interest — like discussing a book or perhaps knitting. The
+          word may also evoke a feeling of exclusivity, such as a country club,
+          where entry requirements or membership processes can contribute to
+          social stratification. This spirit of exclusivity can create barriers
+          rather than connection.
+        </p>
+        <p>
+          This is not, nor has it been, our intention. So why not use a word
+          that does not carry these negative connotations? Hence, the word{" "}
+          <em>connection</em>.
+        </p>
+
+        <blockquote className="border-l-4 border-gold pl-6 py-1 font-playfair text-xl text-navy/80 italic my-6">
+          This name change isn&#39;t just semantic; it&#39;s symbolic.
+        </blockquote>
+
+        <p>We want our organization to seek to:</p>
+        <ol className="list-decimal list-inside space-y-2 pl-2">
+          <li>
+            Foster dynamic relationships between lovers of the arts with varied
+            backgrounds
+          </li>
+          <li>Celebrate a wide range of artistic styles</li>
+          <li>
+            Unite with other organizations in our community through shared
+            artistic experiences and meaningful causes
+          </li>
+        </ol>
+
+        <h3 className="font-playfair text-2xl text-navy pt-4">
+          A Cultural Liaison
+        </h3>
+        <p>
+          With that in mind, it is our intention to keep you, our members, more
+          informed of activities in various arts and educational organizations
+          in our community through what Dr. Bolton calls a &#34;cultural
+          liaison.&#34; His own interest in regional art activities has been
+          heightened by his appointment by the Hot Springs City Council to the
+          Arts Advisory Committee for the city of Hot Springs.
+        </p>
+
+        <h3 className="font-playfair text-2xl text-navy pt-4">
+          Our Vision Is Expanding — Not Changing
+        </h3>
+        <p>
+          We believe that everyone — whether you&#39;re a professional, amateur,
+          educator, or arts enthusiast — should have a place here among kindred
+          spirits in our Hot Springs Music Connection.
+        </p>
+        <p>
+          Unchanged is one of the most impactful roles of this organization:
+          championing young musicians. We do this in two ways:
+        </p>
+        <ul className="list-disc list-inside space-y-2 pl-2">
+          <li>
+            Each <strong className="text-navy">February</strong>, we hold our{" "}
+            <strong className="text-navy">Junior Music Festival</strong>, in
+            which young musicians perform for professional musicians to be
+            adjudicated and encouraged with certificates and trophy cups.
+          </li>
+          <li>
+            Each year we raise funds to award{" "}
+            <strong className="text-navy">scholarships</strong> to auditioned
+            Garland County students pursuing music-related degrees in higher
+            education.
+          </li>
+        </ul>
+        <p>
+          Through this organization, we are given the opportunity to directly
+          support the next generation of artists, educators, and cultural
+          leaders.
+        </p>
+
+        <div className="bg-cream border-l-4 border-burgundy pl-6 py-5 my-6">
+          <p className="font-playfair text-lg text-navy italic leading-relaxed">
+            &#34;To summarize the mission of Hot Springs Music Connection — we
+            exist to celebrate and showcase a wide array of artistic music
+            styles both within and outside our organization while nurturing the
+            education of young musicians and the traditions of American
+            music.&#34;
+          </p>
+        </div>
+
+        <p>
+          The Hot Springs Music Connection was founded in February of 1951, and
+          we are proudly affiliated with both the Arkansas Federation of Music
+          Clubs and the National Federation of Music Clubs, which traces its
+          roots back to 1898.
+        </p>
+
+        <p className="font-playfair text-lg italic text-navy/80 pt-2">
+          With this name change, may our love of music and the arts find new
+          meaning through community, creativity, and connection. In our 75th
+          year, our story is not ending; it is beginning again — stronger than
+          ever with an expanded vision.
+        </p>
+        <p className="text-right font-playfair text-navy/60 italic text-sm">
+          — Dr. Tom Bolton, President
+        </p>
       </div>
     </div>
   </section>
@@ -124,11 +211,12 @@ const MissionThemes = () => (
         </p>
         <h2 className="font-playfair text-4xl text-navy mb-8">Our Mission</h2>
         <blockquote className="font-playfair text-xl text-navy italic leading-relaxed border-l-4 border-gold pl-8 text-left max-w-3xl mx-auto">
-          The Hot Springs Music Club supports and inspires the next generation
-          of musicians through scholarships, performance opportunities, music
-          education, and community engagement. Since 1951, the organization has
-          worked to foster a lifelong appreciation of music while encouraging
-          artistic excellence throughout the Hot Springs community.
+          Hot Springs Music Connection exists to celebrate and showcase a wide
+          array of artistic music styles both within and outside our
+          organization while nurturing the education of young musicians and the
+          traditions of American music. Everyone — whether a professional,
+          amateur, educator, or arts enthusiast — has a place here among kindred
+          spirits.
         </blockquote>
       </div>
       <div className="grid md:grid-cols-3 gap-8 mt-14">
@@ -142,8 +230,8 @@ const MissionThemes = () => (
             desc: "Bringing music appreciation to all residents of Hot Springs.",
           },
           {
-            theme: "Excellence",
-            desc: "Encouraging high standards in musical achievement.",
+            theme: "Connection",
+            desc: "Fostering dynamic relationships between lovers of the arts with varied backgrounds.",
           },
           {
             theme: "Heritage",
@@ -151,11 +239,11 @@ const MissionThemes = () => (
           },
           {
             theme: "Accessibility",
-            desc: "Making music appreciation available to everyone.",
+            desc: "Making music appreciation available to everyone — professionals, amateurs, educators, and enthusiasts alike.",
           },
           {
             theme: "Mentorship",
-            desc: "Connecting students with the guidance they need to succeed.",
+            desc: "Championing the next generation of artists, educators, and cultural leaders.",
           },
         ].map(({ theme, desc }) => (
           <div key={theme} className="border-l-2 border-gold pl-5">
@@ -173,7 +261,7 @@ const PresidentBio = () => (
     <div className="max-w-5xl mx-auto px-4">
       <div className="text-center mb-14">
         <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-3">
-          Club President
+          Our President
         </p>
         <h2 className="font-playfair text-4xl text-navy">Dr. Tom Bolton</h2>
         <div className="w-14 h-0.5 bg-gold mx-auto mt-4" />
@@ -247,7 +335,9 @@ const PresidentBio = () => (
             College. He has served as Minister of Music at Lake Hamilton Baptist
             Church since 2015 and has been the musical director of The Village
             Chorale in Hot Springs Village since 2018. He has been president of
-            the Hot Springs Music Club since 2021.
+            Hot Springs Music Connection since 2021, and was appointed by the
+            Hot Springs City Council to the Arts Advisory Committee for the city
+            of Hot Springs.
           </p>
           <p>
             His career as choral director began in 1969 and continues today. He
@@ -270,14 +360,11 @@ const Leadership = () => {
     { name: "Dr. Tom Bolton", role: "President" },
     { name: "Dianna Thayer", role: "Secretary" },
     { name: "Judy Pugh", role: "Treasurer" },
-    { name: "Kathy Mesko", role: "Junior Festival Chair" },
-    {
-      name: "Sheree O&#39;Rorke",
-      role: "Scholarship Chair",
-      email: "2kidos@gmail.com",
-    },
+    { name: "TBA", role: "Junior Festival Chair" },
+    { name: "TBA", role: "Scholarship Chair" },
     { name: "Jolene Williams", role: "Honors Recital Chair" },
-    { name: "Kay Provus", role: "Yearbook Chair" },
+    { name: "David Thayer", role: "Yearbook Chair" },
+    { name: "Sheree O&#39;Rorke", role: "American Music Chair" },
   ];
   const additional = ["Kathie White", "Mary Tom Taylor", "Jerry Jones"];
   return (
@@ -285,7 +372,7 @@ const Leadership = () => {
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-3">
-            2025–2026 Officers
+            2026–2027 Officers
           </p>
           <h2 className="font-playfair text-4xl text-navy">Leadership Team</h2>
           <div className="w-14 h-0.5 bg-gold mx-auto mt-4" />
@@ -328,13 +415,20 @@ const Leadership = () => {
   );
 };
 
-export const About = () => (
-  <div>
-    <PageHero />
-    <History />
-    <Timeline />
-    <MissionThemes />
-    <PresidentBio />
-    <Leadership />
-  </div>
-);
+export const About = () => {
+  usePageMeta({
+    title: "About Us",
+    description:
+      "Learn about Hot Springs Music Connection — 75 years of musical heritage, our president Dr. Tom Bolton, leadership team, and our 2025 name change from Hot Springs Music Club.",
+  });
+  return (
+    <div>
+      <PageHero />
+      <History />
+      <NameChange />
+      <MissionThemes />
+      <PresidentBio />
+      <Leadership />
+    </div>
+  );
+};

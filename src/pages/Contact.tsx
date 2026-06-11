@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Mail, Phone, ExternalLink } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const PageHero = () => (
   <section
@@ -221,10 +222,17 @@ const FederationLinks = () => (
   </section>
 );
 
-export const Contact = () => (
-  <div>
-    <PageHero />
-    <ContactForm />
-    <FederationLinks />
-  </div>
-);
+export const Contact = () => {
+  usePageMeta({
+    title: "Contact Us",
+    description:
+      "Contact Hot Springs Music Connection for scholarship inquiries, membership, donations, or general questions. Reach us at 132 Apple Blossom Circle, Hot Springs, AR.",
+  });
+  return (
+    <div>
+      <PageHero />
+      <ContactForm />
+      <FederationLinks />
+    </div>
+  );
+};

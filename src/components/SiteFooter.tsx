@@ -9,7 +9,7 @@ export const SiteFooter = () => {
           {/* Brand */}
           <div>
             <h3 className="font-great_vibes text-4xl text-gold mb-3">
-              Hot Springs Music Club
+              Hot Springs Music Connection
             </h3>
             <p className="text-cream/60 text-sm leading-relaxed mb-5">
               Supporting and inspiring the next generation of musicians through
@@ -34,6 +34,7 @@ export const SiteFooter = () => {
             <ul className="space-y-2">
               {[
                 ["/scholarships", "Scholarships"],
+                ["/membership", "Membership"],
                 ["/support", "Support the Club"],
                 ["/about", "Our History"],
                 ["/contact", "Contact Us"],
@@ -82,12 +83,11 @@ export const SiteFooter = () => {
 
         <div className="border-t border-cream/10 pt-8 text-center">
           <p className="text-cream/30 text-xs leading-relaxed">
-            Copyright &copy; 2025 Hot Springs Music Club &mdash; All Rights
-            Reserved.
+            Copyright &copy; 2025 Hot Springs Music Connection &mdash; All
+            Rights Reserved.
             <br />
             Founded February 8, 1951 &middot; Hot Springs, Arkansas
-            <br />
-            {" "}Design by{" "}
+            <br /> Design by{" "}
             <a
               href="https://sitesbycollier.com"
               target="_blank"

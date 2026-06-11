@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Award, Calendar, Users, BookOpen, Heart, Star } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 // ── Hero ─────────────────────────────────────────────────────────────────────
 const Hero = () => (
@@ -26,7 +27,7 @@ const Hero = () => (
           Since 1951
         </h2>
         <p className="text-white/85 text-lg leading-relaxed mb-10 font-source_sans_pro drop-shadow">
-          The Hot Springs Music Club has fostered a lifelong appreciation of
+          Hot Springs Music Connection has fostered a lifelong appreciation of
           music and encouraged artistic excellence throughout our community for
           over 75 years.
         </p>
@@ -86,11 +87,12 @@ const Mission = () => (
       </h2>
       <div className="w-14 h-0.5 bg-gold mx-auto mb-10" />
       <blockquote className="font-playfair text-xl md:text-2xl text-navy/80 italic leading-relaxed">
-        &ldquo;The Hot Springs Music Club supports and inspires the next
-        generation of musicians through scholarships, performance opportunities,
-        music education, and community engagement. Since 1951, the organization
-        has worked to foster a lifelong appreciation of music while encouraging
-        artistic excellence throughout the Hot Springs community.&rdquo;
+        &ldquo;Hot Springs Music Connection exists to celebrate and showcase a
+        wide array of artistic music styles both within and outside our
+        organization while nurturing the education of young musicians and the
+        traditions of American music. Since 1951, the organization has worked to
+        foster a lifelong appreciation of music while encouraging artistic
+        excellence throughout the Hot Springs community.&rdquo;
       </blockquote>
     </div>
   </section>
@@ -174,9 +176,10 @@ const ScholarshipCTA = () => (
       </h2>
       <div className="w-14 h-0.5 bg-gold mx-auto mb-8" />
       <p className="text-cream/70 leading-relaxed mb-4 font-source_sans_pro max-w-2xl mx-auto">
-        Each spring, the Hot Springs Music Club holds competitive auditions open
-        to student musicians throughout Garland County. Scholarships are awarded
-        to exceptional students who demonstrate musical talent and dedication.
+        Each spring, Hot Springs Music Connection holds competitive auditions
+        open to student musicians throughout Garland County. Scholarships are
+        awarded to exceptional students who demonstrate musical talent and
+        dedication.
       </p>
       <p className="text-cream/55 text-sm mb-10 font-source_sans_pro">
         Auditions held at First United Methodist Church on Central Avenue, Hot
@@ -307,7 +310,7 @@ const AudienceLinks = () => (
             audience: "Donors",
             icon: <Heart size={26} className="text-burgundy" />,
             links: [
-              { to: "/support", label: "Support the Club" },
+              { to: "/support", label: "Support Us" },
               { to: "/support", label: "Fund a Scholarship" },
               { to: "/about", label: "Our Impact" },
             ],
@@ -364,22 +367,29 @@ const SupportBanner = () => (
         to="/support"
         className="inline-block bg-black hover:bg-neutral-800 text-white px-10 py-3.5 font-source_sans_pro text-sm tracking-wide uppercase transition-colors rounded-lg"
       >
-        Support the Club
+        Support Us
       </Link>
     </div>
   </section>
 );
 
 // ── Page export ───────────────────────────────────────────────────────────────
-export const Home = () => (
-  <div>
-    <Hero />
-    <ImpactStats />
-    <Mission />
-    <MissionPillars />
-    <ScholarshipCTA />
-    <EventsPreview />
-    <AudienceLinks />
-    <SupportBanner />
-  </div>
-);
+export const Home = () => {
+  usePageMeta({
+    title: "Home",
+    description:
+      "Hot Springs Music Connection has supported music education and artistic excellence in Hot Springs, Arkansas since 1951. Learn about scholarships, find a teacher, and join us.",
+  });
+  return (
+    <div>
+      <Hero />
+      <ImpactStats />
+      <Mission />
+      <MissionPillars />
+      <ScholarshipCTA />
+      <EventsPreview />
+      <AudienceLinks />
+      <SupportBanner />
+    </div>
+  );
+};
