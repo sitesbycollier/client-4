@@ -4,51 +4,12 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 
 // ── Hero ─────────────────────────────────────────────────────────────────────
 const Hero = () => (
-  <section
-    className="relative min-h-[88vh] flex items-center"
-    style={{
-      backgroundImage:
-        "url(https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?auto=format&fit=crop&w=1920&q=80)",
-      backgroundSize: "cover",
-      backgroundPosition: "center top",
-    }}
-  >
-    {/* Strong dark panel on the left so text is always readable */}
-    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent" />
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <div className="max-w-2xl">
-        <p className="text-white/80 tracking-[0.3em] uppercase text-xs font-source_sans_pro mb-5 drop-shadow">
-          Hot Springs, Arkansas &middot; Est. 1951
-        </p>
-        <h1 className="font-playfair text-5xl md:text-7xl text-white leading-tight mb-6 drop-shadow-lg">
-          Supporting Musicians
-        </h1>
-        <h2 className="font-playfair text-3xl md:text-4xl text-white/90 leading-tight mb-6 drop-shadow-lg">
-          Since 1951
-        </h2>
-        <p className="text-white/85 text-lg leading-relaxed mb-10 font-source_sans_pro drop-shadow">
-          Hot Springs Music Connection has fostered a lifelong appreciation of
-          music and encouraged artistic excellence throughout our community for
-          over 75 years.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            to="/scholarships"
-            className="inline-block bg-black hover:bg-neutral-800 text-white px-8 py-3.5 font-source_sans_pro text-sm tracking-wide uppercase transition-colors shadow-md rounded-lg"
-          >
-            Scholarship Information
-          </Link>
-          <Link
-            to="/about"
-            className="inline-block bg-black hover:bg-neutral-800 text-white px-8 py-3.5 font-source_sans_pro text-sm tracking-wide uppercase transition-colors shadow-md rounded-lg"
-          >
-            Our Story
-          </Link>
-        </div>
-      </div>
-    </div>
-    {/* Decorative bottom fade */}
-    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent" />
+  <section className="w-full">
+    <img
+      src="https://c.animaapp.com/mq88tjouY4jneQ/img/uploaded-asset-1781280147292-0.png"
+      alt="Where Music Meets Community — Hot Springs Music Connection"
+      className="w-full block"
+    />
   </section>
 );
 
