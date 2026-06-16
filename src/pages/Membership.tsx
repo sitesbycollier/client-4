@@ -1,4 +1,4 @@
-import { Download, Mail, FileText, CheckCircle } from "lucide-react";
+import { Download, Send, FileText, CheckCircle } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const STEPS = [
@@ -17,11 +17,11 @@ const STEPS = [
       "Fill out all sections of the application, including your contact information and musical background.",
   },
   {
-    icon: Mail,
+    icon: Send,
     step: "3",
-    title: "Email Your Application",
+    title: "Mail Your Application",
     description:
-      "Save your completed form and email it to us at tbolton728@gmail.com.",
+      "Print and mail your completed form with a $30 check made out to HSMC to the address printed at the bottom of the application.",
   },
   {
     icon: CheckCircle,
@@ -36,7 +36,7 @@ export const Membership = () => {
   usePageMeta({
     title: "Membership",
     description:
-      "Join Hot Springs Music Connection — download the membership application, complete it, and email it to us. Become part of Hot Springs' oldest music organization.",
+      "Join Hot Springs Music Connection — download the membership application, complete it, and mail it with a $30 check to HSMC. Become part of Hot Springs' oldest music organization.",
   });
   return (
     <main className="bg-cream min-h-screen">
@@ -59,9 +59,9 @@ export const Membership = () => {
             Membership Application
           </h1>
           <p className="text-white/80 text-lg leading-relaxed max-w-2xl font-source_sans_pro drop-shadow">
-            Become a part of Hot Springs' oldest music organization. Download
-            the application, fill it out, and send it our way — we'd love to
-            have you.
+            Become a part of Hot Springs&#39; oldest music organization.
+            Download the application, fill it out, and mail it in — we&#39;d
+            love to have you.
           </p>
         </div>
       </section>
@@ -112,17 +112,14 @@ export const Membership = () => {
             </h3>
             <div className="w-14 h-0.5 bg-gold mx-auto mb-8" />
             <p className="text-cream/70 font-source_sans_pro mb-10 max-w-lg mx-auto leading-relaxed">
-              Download the membership application form below. Once completed,
-              email it to{" "}
-              <a
-                href="mailto:tbolton728@gmail.com"
-                className="text-gold hover:underline font-medium"
-              >
-                tbolton728@gmail.com
-              </a>{" "}
-              and we'll get back to you shortly.
+              Download and print the membership application form below. Mail
+              your completed form along with a{" "}
+              <span className="text-gold font-medium">
+                $30 check made out to HSMC
+              </span>{" "}
+              to the mailing address printed at the bottom of the application.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <a
                 href="assets/docs/HSMC_Annual_Membership_Form.docx"
                 download="HSMC-Membership-Application.docx"
@@ -130,13 +127,6 @@ export const Membership = () => {
               >
                 <Download size={17} />
                 Download Application
-              </a>
-              <a
-                href="mailto:tbolton728@gmail.com?subject=Membership Application"
-                className="inline-flex items-center gap-2.5 bg-black hover:bg-neutral-800 text-white font-source_sans_pro text-sm tracking-wide uppercase px-8 py-3.5 rounded-lg transition-colors shadow"
-              >
-                <Mail size={17} />
-                Email Us Directly
               </a>
             </div>
             <p className="text-cream/35 text-xs mt-5 font-source_sans_pro">

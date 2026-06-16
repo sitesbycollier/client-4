@@ -36,33 +36,35 @@ const Letter = () => (
           From the Committee
         </p>
         <h2 className="font-playfair text-4xl text-navy mb-4">
-          A Message to Music Teachers
+          A Message to Music Teachers and Guidance Counselors
         </h2>
         <div className="w-14 h-0.5 bg-gold mx-auto" />
       </div>
       <div className="bg-white border border-cream-dark shadow-sm p-10 border-l-4 border-l-burgundy">
         <p className="text-navy font-semibold mb-5 font-source_sans_pro">
-          Dear Music Teachers of Garland County Students,
+          Dear Music Teachers and Guidance Counselors,
         </p>
         <p className="text-navy/65 leading-relaxed mb-4 font-source_sans_pro">
-          The Hot Springs Music Club will be holding our annual scholarship
-          auditions in the spring at the{" "}
-          <strong className="text-navy">
-            First United Methodist Church on Central Avenue
-          </strong>
-          . Students from Garland County who are seeking a music-related degree
-          — or plan to seek a music-related degree — at any accredited
-          institution of higher education are eligible to audition.
+          The Hot Springs Music Club will be awarding scholarships to Garland
+          County students who are seeking — or plan to seek — a music-related
+          degree at any accredited institution of higher education.
         </p>
         <p className="text-navy/65 leading-relaxed mb-4 font-source_sans_pro">
-          The amount and number of scholarships awarded will be determined by
-          the quantity of applicants and the quality of the auditions.
+          Auditions will be submitted by video along with a completed
+          application form. All materials must be received by{" "}
+          <strong className="text-navy">April 1, 2027</strong>.
+        </p>
+        <p className="text-navy/65 leading-relaxed mb-4 font-source_sans_pro">
+          Awards are for <strong className="text-navy">up to $1,500</strong> and
+          will be sent directly to the student&#39;s institution to help defray
+          the cost of applied music lessons. On most years, 2–3 scholarships are
+          awarded.
         </p>
         <p className="text-navy/65 leading-relaxed mb-8 font-source_sans_pro">
-          If you have interested and qualified students, please pass the
-          information on to them. Students may also download the application
-          forms below. Feel free to reproduce additional copies as needed and
-          contact us with any questions.
+          If you have interested and qualified students, please pass this
+          information on to them. Students may download the application form
+          below. Feel free to reproduce additional copies as needed and contact
+          us with any questions.
         </p>
         <div className="border-t border-cream-dark pt-6">
           <p className="text-navy/70 text-sm font-source_sans_pro">
@@ -95,7 +97,7 @@ const EligibilityAndDates = () => (
             "Must be a student from Garland County",
             "Seeking or planning to seek a music-related degree",
             "Enrolled or accepted at an accredited institution of higher education",
-            "Must participate in a live audition",
+            "Audition submitted by video with completed application",
             "All musical disciplines welcome — vocal, instrumental, or music education",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
@@ -116,15 +118,15 @@ const EligibilityAndDates = () => (
           {[
             {
               Icon: Calendar,
-              label: "Application Deadline",
+              label: "Application & Video Deadline",
               value:
-                "April 15, 2026 — submit completed forms to the Scholarship Committee",
+                "April 1, 2027 — completed application and video submission due to the Scholarship Committee",
             },
             {
               Icon: Calendar,
-              label: "Audition Date",
+              label: "Award Amount",
               value:
-                "Spring 2026 — First United Methodist Church, Central Avenue, Hot Springs",
+                "Up to $1,500 per scholarship, paid directly to the recipient&#39;s institution — typically 2–3 awards per year",
             },
             {
               Icon: AlertCircle,
@@ -168,7 +170,7 @@ const ApplicationDownload = () => (
         additional copies for qualified students.
       </p>
       <a
-        href="assets/docs/Scholarship_App_2025.docx"
+        href="/assets/docs/Scholarship_App_2025.docx"
         download="HSMC-Scholarship-Application.docx"
         className="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 text-white px-10 py-5 font-source_sans_pro tracking-wide transition-colors rounded-lg"
       >
