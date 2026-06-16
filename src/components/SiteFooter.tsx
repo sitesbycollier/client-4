@@ -34,8 +34,8 @@ export const SiteFooter = () => {
             <ul className="space-y-2">
               {[
                 ["/scholarships", "Scholarships"],
-                ["/membership", "Membership"],
-                ["/support", "Support the Club"],
+                ["/education", "Education & Programs"],
+                ["/get-involved", "Get Involved"],
                 ["/about", "Our History"],
                 ["/contact", "Contact Us"],
               ].map(([to, label]) => (

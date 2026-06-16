@@ -1,3 +1,4 @@
+import { Music, FileText, Archive, Download } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const PIANO_TEACHERS = [
@@ -49,6 +50,65 @@ const INSTRUMENTAL_TEACHERS = [
     name: "Kristen Bomberger",
     email: "kbbomberger@gmail.com",
     phones: ["(501) 463-1475"],
+  },
+];
+
+const PROGRAM_SECTIONS = [
+  {
+    icon: Archive,
+    title: "Historic Concert Programs",
+    description:
+      "A growing archive of concert and event programs from past Hot Springs Music Connection seasons.",
+  },
+  {
+    icon: Music,
+    title: "Guest Artist Programs",
+    description:
+      "Programs from special guest performances and federation-related events held through the years.",
+  },
+  {
+    icon: FileText,
+    title: "Student & Scholarship Events",
+    description:
+      "Programs connected to student performances, scholarship showcases, and related club activities.",
+  },
+];
+
+const PROGRAM_DOWNLOADS = [
+  {
+  title: "A New Name, A New Vision",
+  filename: "Program 25-09-07.pdf",
+  href: "/assets/docs/Program 25-09-07.pdf",
+  },
+  {
+  title: "October Interludes: A Chamber Music Celebration",
+  filename: "Program 25-10-05.pdf",
+  href: "/assets/docs/Program 25-10-05.pdf",
+  },
+  {
+  title: "Her Sound, Her Story: Music by American Women",
+  filename: "Program 25-11-09.pdf",
+  href: "/assets/docs/Program 25-11-09.pdf",
+  },
+  {
+  title: "Founders Day Jubilee: 75 Years of Music and Meaning",
+  filename: "Program 26-01-11.pdf",
+  href: "/assets/docs/Program 26-01-11.pdf",
+  },
+  {
+  title: "Sanctuary of Sound: Music for the Church",
+  filename: "Program 26-03-15.pdf",
+  href: "/assets/docs/Program 26-03-15.pdf",
+  },
+  {
+  title: "Sound in Motion: Dance to the Music",
+  filename: "Program 26-04-12.pdf",
+  href: "/assets/docs/Program 26-04-12.pdf",
+  },
+  {
+  title: "Spotlight on Excellence: Recital of Honor Students",
+  filename: "Program 26-05-03.pdf",
+  href: "/assets/docs/Program 26-05-03.pdf",
   },
 ];
 
@@ -173,6 +233,68 @@ const InstrumentalTeachers = () => (
   </section>
 );
 
+const ProgramsArchive = () => (
+  <section className="bg-cream-dark py-20">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-12">
+        <p className="text-burgundy/70 text-xs tracking-[0.3em] uppercase font-source_sans_pro mb-3">
+          Program Archive
+        </p>
+        <h2 className="font-playfair text-3xl md:text-4xl text-navy">
+          Education &amp; Program Resources
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+        {PROGRAM_SECTIONS.map(({ icon: Icon, title, description }) => (
+          <div
+            key={title}
+            className="bg-white rounded-xl p-8 shadow-sm border border-gold/15"
+          >
+            <Icon size={22} className="text-gold mb-4" />
+            <h3 className="font-playfair text-xl text-navy mb-3">{title}</h3>
+            <p className="text-navy/65 text-sm leading-relaxed font-source_sans_pro">
+              {description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-navy rounded-xl p-10 text-center">
+        <h3 className="font-playfair text-3xl text-cream mb-3">
+          Program Downloads
+        </h3>
+        <div className="w-14 h-0.5 bg-gold mx-auto mb-6" />
+        <p className="text-cream/75 font-source_sans_pro max-w-2xl mx-auto leading-relaxed mb-8">
+          As programs are added, they will appear here in chronological
+          order for easy browsing and download.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+          {PROGRAM_DOWNLOADS.map(({ title, filename, href }) => (
+            <a
+              key={href}
+              href={href}
+              download
+              className="flex items-center justify-between gap-3 rounded-lg border border-gold/35 bg-white/5 hover:bg-white/10 px-4 py-3 transition-colors"
+            >
+              <div className="text-left min-w-0">
+                <p className="font-source_sans_pro text-cream text-sm">
+                  {title}
+                </p>
+                <p className="font-source_sans_pro text-cream/60 text-xs">
+                  View Program PDF
+                </p>
+              </div>
+              <Download size={16} className="text-gold shrink-0" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const ListYourself = () => (
   <section className="bg-navy py-16">
     <div className="max-w-3xl mx-auto px-4 text-center">
@@ -195,9 +317,9 @@ const ListYourself = () => (
 
 export const Education = () => {
   usePageMeta({
-    title: "Music Education",
+    title: "Education & Programs",
     description:
-      "Find qualified piano and instrumental music teachers in the Hot Springs area. Hot Springs Music Connection connects students with experienced local instructors.",
+      "Find qualified piano and instrumental music teachers and browse archived Hot Springs Music Connection program downloads in one place.",
   });
   return (
     <div>
@@ -205,6 +327,7 @@ export const Education = () => {
       <Intro />
       <PianoTeachers />
       <InstrumentalTeachers />
+      <ProgramsArchive />
       <ListYourself />
     </div>
   );

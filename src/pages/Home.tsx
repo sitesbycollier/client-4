@@ -271,8 +271,8 @@ const AudienceLinks = () => (
             audience: "Donors",
             icon: <Heart size={26} className="text-burgundy" />,
             links: [
-              { to: "/support", label: "Support Us" },
-              { to: "/support", label: "Fund a Scholarship" },
+              { to: "/get-involved", label: "Support Us" },
+              { to: "/get-involved", label: "Fund a Scholarship" },
               { to: "/about", label: "Our Impact" },
             ],
           },
@@ -282,7 +282,7 @@ const AudienceLinks = () => (
             links: [
               { to: "/about", label: "Club History" },
               { to: "/contact", label: "Get in Touch" },
-              { to: "/support", label: "Volunteer" },
+              { to: "/get-involved", label: "Volunteer" },
             ],
           },
         ].map(({ audience, icon, links }) => (
@@ -325,7 +325,7 @@ const SupportBanner = () => (
         music education in Hot Springs.
       </p>
       <Link
-        to="/support"
+        to="/get-involved"
         className="inline-block bg-black hover:bg-neutral-800 text-white px-10 py-3.5 font-source_sans_pro text-sm tracking-wide uppercase transition-colors rounded-lg"
       >
         Support Us

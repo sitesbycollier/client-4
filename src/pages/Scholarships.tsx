@@ -166,7 +166,7 @@ const ApplicationDownload = () => (
       </h2>
       <p className="text-cream/65 mb-10 leading-relaxed font-source_sans_pro">
         Download the official scholarship application form. Complete all
-        sections and submit by April 15, 2026. Music teachers may reproduce
+        sections and submit by April 1, 2027. Music teachers may reproduce
         additional copies for qualified students.
       </p>
       <a

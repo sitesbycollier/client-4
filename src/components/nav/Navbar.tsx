@@ -6,9 +6,8 @@ const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About" },
   { to: "/scholarships", label: "Scholarships" },
-  { to: "/support", label: "Support" },
-  { to: "/education", label: "Education" },
-  { to: "/membership", label: "Membership" },
+  { to: "/education", label: "Education & Programs" },
+  { to: "/get-involved", label: "Get Involved" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -30,11 +29,14 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex flex-col leading-tight group">
-              <span className="font-great_vibes text-4xl text-burgundy leading-none group-hover:text-burgundy-light transition-colors">
+            <Link
+              to="/"
+              className="flex flex-col leading-none group shrink-0 min-w-0"
+            >
+              <span className="font-great_vibes text-[1.7rem] sm:text-[2rem] text-burgundy leading-none group-hover:text-burgundy-light transition-colors whitespace-nowrap">
                 Hot Springs Music Connection
               </span>
-              <span className="text-navy/50 text-[10px] tracking-[0.25em] uppercase font-source_sans_pro mt-0.5">
+              <span className="text-navy/50 text-[10px] tracking-[0.2em] uppercase font-source_sans_pro mt-0.5 whitespace-nowrap">
                 Hot Springs, Arkansas
               </span>
             </Link>

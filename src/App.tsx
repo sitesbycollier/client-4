@@ -3,10 +3,9 @@ import { Layout } from "@/components/layout/Layout";
 import { Home } from "@/pages/Home";
 import { About } from "@/pages/About";
 import { Scholarships } from "@/pages/Scholarships";
-import { Support } from "@/pages/Support";
 import { Education } from "@/pages/Education";
 import { Contact } from "@/pages/Contact";
-import { Membership } from "@/pages/Membership";
+import { GetInvolved } from "./pages/GetInvolved";
 
 export const App = () => {
   return (
@@ -16,10 +15,9 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="scholarships" element={<Scholarships />} />
-          <Route path="support" element={<Support />} />
           <Route path="education" element={<Education />} />
+          <Route path="get-involved" element={<GetInvolved />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="membership" element={<Membership />} />
         </Route>
       </Routes>
     </HashRouter>
