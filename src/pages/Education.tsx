@@ -1,5 +1,6 @@
 import { Music, FileText, Archive, Download } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { Link } from "react-router-dom";
 
 const PIANO_TEACHERS = [
   {
@@ -305,12 +306,12 @@ const ListYourself = () => (
         If you&#39;re a qualified music teacher in the Hot Springs area and
         would like to be listed in our directory, please reach out to us.
       </p>
-      <a
-        href="/contact"
+      <Link
+        to="/contact"
         className="inline-block bg-black hover:bg-neutral-800 text-white text-sm font-source_sans_pro tracking-wide uppercase px-7 py-3 transition-colors rounded-lg"
       >
         Get in Touch
-      </a>
+      </Link>
     </div>
   </section>
 );
