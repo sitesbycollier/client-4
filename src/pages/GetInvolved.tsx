@@ -38,7 +38,7 @@ const MEMBERSHIP_STEPS = [
     step: "4",
     title: "We&#39;ll Be in Touch",
     description:
-      "A club representative will follow up with you about next steps and upcoming meeting dates.",
+      "A club representative will follow up with you about next steps and upcoming HSMC-sponsored program dates.",
   },
 ];
 

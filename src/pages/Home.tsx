@@ -59,6 +59,45 @@ const Mission = () => (
   </section>
 );
 
+const Affiliations = () => (
+  <section className="bg-cream py-16 border-y border-gold/20">
+    <div className="max-w-4xl mx-auto px-4 text-center">
+      <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-3">
+        Affiliated Since 1951
+      </p>
+      <h2 className="font-playfair text-3xl text-navy mb-8">
+        Federation Affiliations
+      </h2>
+      <div className="grid sm:grid-cols-2 gap-5">
+        {[
+          {
+            name: "National Federation of Music Clubs",
+            logo: "assets/images/NFMC.png",
+          },
+          {
+            name: "Arkansas Federation of Music Clubs",
+            logo: "assets/images/FMC.png",
+          },
+        ].map((affiliation) => (
+          <div
+            key={affiliation.name}
+            className="bg-cream-dark border-l-4 border-burgundy p-6 flex flex-col items-center"
+          >
+            <img
+              src={affiliation.logo}
+              alt={`${affiliation.name} logo`}
+              className="h-28 w-28 object-contain mb-5"
+            />
+            <p className="font-playfair text-xl text-navy">
+              {affiliation.name}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 // ── Mission Pillars ───────────────────────────────────────────────────────────
 const MissionPillars = () => (
   <section className="bg-cream py-24">
@@ -165,69 +204,137 @@ const ScholarshipCTA = () => (
 );
 
 // ── Upcoming Events Preview ───────────────────────────────────────────────────
+const PUBLIC_PROGRAMS = [
+  {
+    title: "A Tapestry of Sound",
+    date: "Sunday, September 13, 2026",
+    time: "3:00 pm",
+    venue: "St. Luke's Episcopal Church Parish Hall",
+    address: "228 Spring Street",
+  },
+  {
+    title: "A Chamber Music Sampler",
+    date: "Sunday, October 11, 2026",
+    time: "3:00 pm",
+    venue: "St. Mary of the Springs Catholic Church Parish Hall",
+    address: "100 Central Avenue",
+  },
+  {
+    title: "Sounds of the American Spirit",
+    date: "Sunday, November 8, 2026",
+    time: "3:00 pm",
+    venue: "First United Methodist Church Cupp Hall",
+    address: "1100 Central Avenue",
+  },
+  {
+    title: "A Heritage of Sound: 1000 Years of Music in Hot Springs",
+    date: "Sunday, January 10, 2027",
+    time: "3:00 pm",
+    venue: "Place TBA",
+    address: "",
+  },
+  {
+    title: "Mutual Admiration: SAI and HSMC",
+    date: "Saturday, February 13, 2027",
+    time: "3:00 pm",
+    venue: "First Presbyterian Church",
+    address: "213 Whittington Avenue",
+  },
+  {
+    title: "Music of the Church: Where Faith Finds a Voice",
+    date: "Sunday, March 14, 2027",
+    time: "3:00 pm",
+    venue: "TBA",
+    address: "",
+  },
+  {
+    title: "From Highlands to Heartland: The Celtic Thread in American Song",
+    date: "Sunday, April 25, 2027",
+    time: "3:00 pm",
+    venue: "TBA",
+    address: "",
+  },
+  {
+    title: "The Promise of Tomorrow: The Next Generation in Recital",
+    date: "Sunday, May 16, 2027",
+    time: "3:00 pm",
+    venue: "Grand Avenue United Methodist Church",
+    address: "841 Quapaw Avenue",
+  },
+];
+
 const EventsPreview = () => (
   <section className="bg-cream py-24">
-    <div className="max-w-5xl mx-auto px-4">
+    <div className="max-w-6xl mx-auto px-4">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
         <div>
           <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-3">
             Mark Your Calendar
           </p>
-          <h2 className="font-playfair text-4xl text-navy">Upcoming Events</h2>
+          <h2 className="font-playfair text-4xl text-navy">
+            Calendar of Events
+          </h2>
+          <p className="text-navy/60 font-source_sans_pro mt-3">
+            Free public programs and other HSMC-sponsored events.
+          </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-6">
-        {[
-          {
-            date: "Spring 2025",
-            day: "TBA",
-            title: "Annual Scholarship Auditions",
-            type: "Audition",
-            location: "First United Methodist Church",
-            desc: "Competitive auditions open to student musicians throughout Garland County. Contact Sheree O&#39;Rorke for application details.",
-          },
-          {
-            date: "Ongoing",
-            day: "Monthly",
-            title: "Club Membership Meetings",
-            type: "Meeting",
-            location: "Hot Springs, Arkansas",
-            desc: "Regular meetings for club members featuring guest performers, educational programs, and community updates.",
-          },
-          {
-            date: "Year-Round",
-            day: "Seasonal",
-            title: "Community Music Programs",
-            type: "Community",
-            location: "Greater Hot Springs Area",
-            desc: "The club supports and participates in music appreciation events throughout Garland County.",
-          },
-        ].map(({ date, day, title, type, location, desc }) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        {PUBLIC_PROGRAMS.map(({ title, date, time, venue, address }) => (
           <div
             key={title}
             className="bg-cream-dark p-7 border-b-4 border-gold hover:shadow-md transition-shadow"
           >
-            <div className="flex items-start justify-between mb-4">
-              <div className="bg-navy px-2.5 py-1 text-center min-w-[60px]">
-                <p className="text-gold text-[10px] tracking-widest uppercase font-source_sans_pro">
-                  {date}
-                </p>
-                <p className="text-cream font-playfair text-lg leading-none mt-0.5">
-                  {day}
-                </p>
-              </div>
-              <span className="text-xs tracking-widest uppercase text-burgundy font-source_sans_pro bg-burgundy/10 px-2.5 py-1">
-                {type}
-              </span>
-            </div>
+            <span className="inline-block text-xs tracking-widest uppercase text-burgundy font-source_sans_pro bg-burgundy/10 px-2.5 py-1 mb-4">
+              Free Public Program
+            </span>
             <h3 className="font-playfair text-xl text-navy mb-1">{title}</h3>
-            <p className="text-navy/45 text-xs tracking-wide mb-3 font-source_sans_pro uppercase">
-              {location}
+            <p className="text-navy/70 text-sm font-source_sans_pro mb-3">
+              {time}, {date}
             </p>
-            <p
-              className="text-navy/60 text-sm leading-relaxed font-source_sans_pro"
-              dangerouslySetInnerHTML={{ __html: desc }}
-            />
+            <p className="text-navy/55 text-sm leading-relaxed font-source_sans_pro">
+              {venue}
+              {address && (
+                <>
+                  <br />
+                  {address}
+                </>
+              )}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="grid md:grid-cols-3 gap-5">
+        {[
+          {
+            title: "Annual Scholarship Auditions",
+            date: "Spring 2027",
+            details:
+              "Competitive auditions open to student musicians throughout Garland County. Contact Peggy Stratton for application details.",
+          },
+          {
+            title: "Junior Festival",
+            date: "2027 Date TBA",
+            details: "Westminster Presbyterian Church, 3819 Central Avenue.",
+          },
+          {
+            title: "National Music Week",
+            date: "May 2-9, 2027",
+            details:
+              "A national celebration of music supported by HSMC-sponsored programs and community music activities.",
+          },
+        ].map(({ title, date, details }) => (
+          <div key={title} className="bg-navy p-6">
+            <p className="text-gold text-xs tracking-widest uppercase font-source_sans_pro mb-2">
+              Other Event
+            </p>
+            <h3 className="font-playfair text-xl text-cream mb-1">{title}</h3>
+            <p className="text-cream/75 text-sm font-source_sans_pro mb-3">
+              {date}
+            </p>
+            <p className="text-cream/60 text-sm leading-relaxed font-source_sans_pro">
+              {details}
+            </p>
           </div>
         ))}
       </div>
@@ -346,6 +453,7 @@ export const Home = () => {
       <Hero />
       <ImpactStats />
       <Mission />
+      <Affiliations />
       <MissionPillars />
       <ScholarshipCTA />
       <EventsPreview />

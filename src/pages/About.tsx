@@ -269,9 +269,11 @@ const PresidentBio = () => (
       <div className="md:flex gap-12 items-start">
         <div className="md:w-64 shrink-0 mb-8 md:mb-0">
           <div className="bg-cream-dark border-t-4 border-burgundy p-6 text-center">
-            <div className="w-24 h-24 rounded-full bg-navy/10 flex items-center justify-center mx-auto mb-4">
-              <span className="font-playfair text-4xl text-navy/40">T</span>
-            </div>
+            <img
+              src="assets/images/Tom.png"
+              alt="Dr. Tom Bolton"
+              className="h-28 w-28 object-cover mx-auto mb-5 bg-navy/10"
+            />
             <h3 className="font-playfair text-xl text-navy mb-1">
               Dr. Tom Bolton
             </h3>
@@ -360,7 +362,7 @@ const Leadership = () => {
     { name: "Dr. Tom Bolton", role: "President" },
     { name: "Dianna Thayer", role: "Secretary" },
     { name: "Judy Pugh", role: "Treasurer" },
-    { name: "Peggy Stratton", role: "Junior Festival Chair" },
+    { name: "Peggy Stratton", role: "Festival Chair and Auditions Chair" },
     { name: "TBA", role: "Scholarship Chair" },
     { name: "Jolene Williams", role: "Honors Recital Chair" },
     { name: "David Thayer", role: "Yearbook Chair" },

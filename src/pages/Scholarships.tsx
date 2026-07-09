@@ -71,10 +71,10 @@ const Letter = () => (
             Sincerely,
           </p>
           <p className="font-playfair text-2xl text-navy mt-1">
-            Sheree O&#39;Rorke
+            Peggy Stratton
           </p>
           <p className="text-navy/55 text-sm mt-0.5 font-source_sans_pro">
-            Chair, Scholarship Committee
+            Auditions Chair
           </p>
         </div>
       </div>

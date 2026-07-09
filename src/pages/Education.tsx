@@ -1,56 +1,62 @@
 import { Music, FileText, Archive, Download } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { Link } from "react-router-dom";
 
-const PIANO_TEACHERS = [
+const MEMBER_TEACHERS = [
   {
-    name: "Kristen Bomberger",
-    email: "kbbomberger@gmail.com",
-    phones: ["(501) 463-1475"],
-  },
-  {
-    name: "Lowella Cherry",
-    email: "rcherry@cablelynx.com",
-    phones: ["(501) 620-4836", "(501) 282-1731"],
-  },
-  {
-    name: "Diana Glover",
-    email: "dianglover@yahoo.com",
-    phones: ["(501) 622-0820"],
+    name: "Dr. Tish Kennedy Davenport",
+    email: "tishkennedydavenport@gmail.com",
+    phones: ["(480) 221-7854"],
+    specialties: "Piano, Flute",
   },
   {
     name: "Karen Granderson",
     email: "karen.granderson@gmail.com",
     phones: ["(817) 689-3979"],
+    specialties: "Piano",
   },
   {
-    name: "Kristen Marie LaMadrid",
-    email: "krisxmarie@yahoo.com",
+    name: "Diane Kesling",
+    email: "dixiedivadiane@att.net",
+    phones: ["(501) 655-1940"],
+    specialties: "Voice",
+  },
+  {
+    name: "Kristen Marie La Madrid",
+    email: "kristenmariemusic@yahoo.com",
     phones: ["(501) 463-0948"],
+    specialties: "Piano",
+  },
+  {
+    name: "Shelley Martin",
+    email: "shelley.e.martin@gmail.com",
+    phones: ["(501) 282-8145"],
+    specialties: "Flute, clarinet, saxophone, piano",
+  },
+  {
+    name: "Charlie Mink",
+    email: "Charliemink1042@gmail.com",
+    phones: ["(870) 213-5994"],
+    specialties: "Mountain dulcimer (loaners available)",
   },
   {
     name: "Sigilda Naidin",
+    location: "HSV",
     email: "sigilda@yahoo.com",
     phones: ["(501) 627-6273"],
+    specialties: "Piano",
   },
   {
-    name: "Pat Smith",
-    email: "mspat1968@yahoo.com",
-    phones: ["(501) 767-9752", "(501) 282-7330"],
+    name: "Kathleen Ogilvie",
+    location: "HSV",
+    email: "ogilvie.kathleen@att.net",
+    phones: ["(713) 206-4362"],
+    specialties: "Violin",
   },
   {
-    name: "Jolene C. Williams",
-    email: "triplej97@yahoo.com",
-    phones: ["(501) 760-2698", "(501) 545-6374"],
-  },
-];
-
-const INSTRUMENTAL_TEACHERS = [
-  {
-    instrument: "Violin",
-    name: "Kristen Bomberger",
-    email: "kbbomberger@gmail.com",
-    phones: ["(501) 463-1475"],
+    name: "Jolene Williams",
+    email: "jolenewilliams.pianoandvoice@gmail.com",
+    phones: ["(501) 545-6374"],
+    specialties: "Piano, Voice",
   },
 ];
 
@@ -115,19 +121,26 @@ const PROGRAM_DOWNLOADS = [
 
 interface Teacher {
   name: string;
+  location?: string;
   email: string;
   phones: string[];
-  instrument?: string;
+  specialties: string;
 }
 
 const TeacherCard = ({ teacher }: { teacher: Teacher }) => (
   <div className="bg-cream border-l-4 border-burgundy p-6">
-    {teacher.instrument && (
-      <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro font-semibold mb-1">
-        {teacher.instrument} Teacher
-      </p>
-    )}
-    <h3 className="font-playfair text-xl text-navy mb-2">{teacher.name}</h3>
+    <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro font-semibold mb-1">
+      {teacher.specialties}
+    </p>
+    <h3 className="font-playfair text-xl text-navy mb-2">
+      {teacher.name}
+      {teacher.location && (
+        <span className="font-source_sans_pro text-sm text-navy/45">
+          {" "}
+          ({teacher.location})
+        </span>
+      )}
+    </h3>
     <div className="space-y-1">
       <a
         href={`mailto:${teacher.email}`}
@@ -167,8 +180,8 @@ const PageHero = () => (
         Music Education
       </h1>
       <p className="text-white/80 text-lg leading-relaxed max-w-2xl font-source_sans_pro drop-shadow">
-        Connect with qualified local teachers for piano and instrumental
-        instruction in the Hot Springs area.
+        Connect with Hot Springs Music Connection members who teach music in the
+        Hot Springs area.
       </p>
     </div>
   </section>
@@ -185,48 +198,28 @@ const Intro = () => (
       </h2>
       <div className="w-14 h-0.5 bg-gold mx-auto mb-8" />
       <p className="text-navy/65 leading-relaxed max-w-2xl mx-auto font-source_sans_pro">
-        The Hot Springs Music Club is proud to connect aspiring musicians with
-        experienced local teachers. Whether you&#39;re beginning your musical
-        journey or preparing for competitive auditions, these instructors can
-        help you reach your goals.
+        The Hot Springs Music Club lists teachers who are members of the club.
+        Whether you&#39;re beginning your musical journey or preparing for
+        competitive auditions, these instructors can help you reach your goals.
       </p>
     </div>
   </section>
 );
 
-const PianoTeachers = () => (
+const MemberTeachers = () => (
   <section className="bg-cream-dark py-16">
     <div className="max-w-5xl mx-auto px-4">
       <div className="mb-10">
         <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-2">
-          Keyboard
-        </p>
-        <h2 className="font-playfair text-3xl text-navy">Piano Teachers</h2>
-        <div className="w-10 h-0.5 bg-gold mt-3" />
-      </div>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {PIANO_TEACHERS.map((t) => (
-          <TeacherCard key={t.name + t.email} teacher={t} />
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-const InstrumentalTeachers = () => (
-  <section className="bg-cream py-16">
-    <div className="max-w-5xl mx-auto px-4">
-      <div className="mb-10">
-        <p className="text-burgundy text-xs tracking-widest uppercase font-source_sans_pro mb-2">
-          Strings &amp; More
+          Member Directory
         </p>
         <h2 className="font-playfair text-3xl text-navy">
-          Instrumental Teachers
+          Member Music Teachers
         </h2>
         <div className="w-10 h-0.5 bg-gold mt-3" />
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {INSTRUMENTAL_TEACHERS.map((t) => (
+        {MEMBER_TEACHERS.map((t) => (
           <TeacherCard key={t.name + t.email} teacher={t} />
         ))}
       </div>
@@ -296,26 +289,6 @@ const ProgramsArchive = () => (
   </section>
 );
 
-const ListYourself = () => (
-  <section className="bg-navy py-16">
-    <div className="max-w-3xl mx-auto px-4 text-center">
-      <h2 className="font-playfair text-3xl text-cream mb-4">
-        Are You a Music Teacher?
-      </h2>
-      <p className="text-cream/60 leading-relaxed font-source_sans_pro mb-8">
-        If you&#39;re a qualified music teacher in the Hot Springs area and
-        would like to be listed in our directory, please reach out to us.
-      </p>
-      <Link
-        to="/contact"
-        className="inline-block bg-black hover:bg-neutral-800 text-white text-sm font-source_sans_pro tracking-wide uppercase px-7 py-3 transition-colors rounded-lg"
-      >
-        Get in Touch
-      </Link>
-    </div>
-  </section>
-);
-
 export const Education = () => {
   usePageMeta({
     title: "Education & Programs",
@@ -326,10 +299,8 @@ export const Education = () => {
     <div>
       <PageHero />
       <Intro />
-      <PianoTeachers />
-      <InstrumentalTeachers />
+      <MemberTeachers />
       <ProgramsArchive />
-      <ListYourself />
     </div>
   );
 };
