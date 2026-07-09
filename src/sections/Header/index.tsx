@@ -80,12 +80,12 @@ export const Header = () => {
                       </p>
                       <p className="box-border caret-transparent outline-[3px] break-words no-underline">
                         <strong className="box-border caret-transparent text-zinc-600 font-bold outline-[3px] break-words no-underline">
-                          Sheree O&#39;Rorke
+                          Peggy Stratton
                         </strong>
                       </p>
                       <p className="box-border caret-transparent outline-[3px] break-words no-underline">
                         <strong className="box-border caret-transparent text-zinc-600 font-bold outline-[3px] break-words no-underline">
-                          Chair, Scholarship Committee
+                          Auditions Chair
                         </strong>
                       </p>
                       <p className="box-border caret-transparent outline-[3px] break-words no-underline">

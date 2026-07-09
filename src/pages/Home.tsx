@@ -308,7 +308,7 @@ const EventsPreview = () => (
         {[
           {
             title: "Annual Scholarship Auditions",
-            date: "Spring 2027",
+            date: "Spring, 2027",
             details:
               "Competitive auditions open to student musicians throughout Garland County. Contact Peggy Stratton for application details.",
           },
