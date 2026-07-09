@@ -362,8 +362,10 @@ const Leadership = () => {
     { name: "Dr. Tom Bolton", role: "President" },
     { name: "Dianna Thayer", role: "Secretary" },
     { name: "Judy Pugh", role: "Treasurer" },
-    { name: "Peggy Stratton", role: "Festival Chair and Auditions Chair" },
-    { name: "TBA", role: "Scholarship Chair" },
+    {
+      name: "Peggy Stratton",
+      role: "Junior Festival Chair and Scholarship Auditions Chair",
+    },
     { name: "Jolene Williams", role: "Honors Recital Chair" },
     { name: "David Thayer", role: "Yearbook Chair" },
     { name: "Sheree O&#39;Rorke", role: "American Music Chair" },

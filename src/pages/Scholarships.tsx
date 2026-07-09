@@ -98,7 +98,7 @@ const EligibilityAndDates = () => (
             "Seeking or planning to seek a music-related degree",
             "Enrolled or accepted at an accredited institution of higher education",
             "Audition submitted by video with completed application",
-            "All musical disciplines welcome — vocal, instrumental, or music education",
+            "All vocal, keyboard, or other instrumental auditions are welcome.",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle size={17} className="text-gold mt-0.5 shrink-0" />
@@ -162,7 +162,7 @@ const ApplicationDownload = () => (
         Ready to Apply?
       </p>
       <h2 className="font-playfair text-4xl text-cream mb-5">
-        2026 Scholarship Application
+        2027 Scholarship Application
       </h2>
       <p className="text-cream/65 mb-10 leading-relaxed font-source_sans_pro">
         Download the official scholarship application form. Complete all
@@ -170,12 +170,12 @@ const ApplicationDownload = () => (
         additional copies for qualified students.
       </p>
       <a
-        href="assets/docs/Scholarship_App_2025.docx"
-        download="HSMC-Scholarship-Application.docx"
+        href="assets/docs/Scholarship_Application_2027.docx"
+        download="HSMC-Scholarship-Application-2027.docx"
         className="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 text-white px-10 py-5 font-source_sans_pro tracking-wide transition-colors rounded-lg"
       >
         <Download size={19} />
-        Download 2026 Scholarship Application
+        Download 2027 Scholarship Application
       </a>
       <p className="text-cream/35 text-xs mt-5 font-source_sans_pro">
         .DOCX format &middot; Questions? Contact Tom Bolton at
@@ -186,13 +186,25 @@ const ApplicationDownload = () => (
 );
 
 // ─── Update this list to add new scholarship recipients ──────────────────────
-const SCHOLARSHIP_WINNERS: { year: string; recipients: string[] }[] = [
+const SCHOLARSHIP_WINNERS: {
+  year: string;
+  recipients: { name: string; details: string }[];
+}[] = [
   {
-    year: "2022–2023",
-    recipients: ["Carlee McCrary", "Catie Canu", "Jacob Happy"],
+    year: "2026–2027",
+    recipients: [
+      {
+        name: "Giea de los Reyes",
+        details:
+          "Percussionist, attending the University of Central Arkansas as a music education major.",
+      },
+      {
+        name: "Morgan Humble",
+        details:
+          "Vocalist, attending Ouachita Baptist University as a musical theater major.",
+      },
+    ],
   },
-  // { year: "2023–2024", recipients: ["First Last", "First Last"] },
-  // { year: "2024–2025", recipients: ["First Last"] },
 ];
 
 const PastRecipients = () => (
@@ -208,7 +220,7 @@ const PastRecipients = () => (
         <p className="text-navy/60 max-w-2xl mx-auto leading-relaxed font-source_sans_pro">
           Dr. Tom Bolton, President of the Hot Springs Music Club, announced
           that the organization awarded college music scholarships for the
-          2022–2023 academic year. Three applicants were successful in their
+          2026–2027 academic year. Two applicants were successful in their
           auditions.
         </p>
         <div className="w-14 h-0.5 bg-gold mx-auto mt-8" />
@@ -221,13 +233,18 @@ const PastRecipients = () => (
               {year} Academic Year
             </h3>
             <ul className="divide-y divide-cream-dark">
-              {recipients.map((name) => (
+              {recipients.map(({ name, details }) => (
                 <li
                   key={name}
-                  className="flex items-center justify-between py-4 px-6 bg-white hover:bg-cream-dark/40 transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 py-4 px-6 bg-white hover:bg-cream-dark/40 transition-colors"
                 >
-                  <span className="font-playfair text-lg text-navy">
-                    {name}
+                  <span>
+                    <span className="block font-playfair text-lg text-navy">
+                      {name}
+                    </span>
+                    <span className="block text-navy/55 text-sm font-source_sans_pro leading-relaxed">
+                      {details}
+                    </span>
                   </span>
                   <span className="text-burgundy text-[10px] tracking-widest uppercase font-source_sans_pro bg-burgundy/8 px-3 py-1 border border-burgundy/20">
                     Scholarship Recipient
@@ -246,7 +263,7 @@ export const Scholarships = () => {
   usePageMeta({
     title: "Scholarships",
     description:
-      "Hot Springs Music Connection awards scholarships to Garland County students pursuing music degrees. Download the 2026 application and learn about audition requirements and deadlines.",
+      "Hot Springs Music Connection awards scholarships to Garland County students pursuing music degrees. Download the 2027 application and learn about audition requirements and deadlines.",
   });
   return (
     <div>

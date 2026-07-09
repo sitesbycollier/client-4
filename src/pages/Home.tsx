@@ -181,11 +181,7 @@ const ScholarshipCTA = () => (
         awarded to exceptional students who demonstrate musical talent and
         dedication.
       </p>
-      <p className="text-cream/55 text-sm mb-10 font-source_sans_pro">
-        Auditions held at First United Methodist Church on Central Avenue, Hot
-        Springs.
-      </p>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4 mt-10">
         <Link
           to="/scholarships"
           className="inline-block bg-black hover:bg-neutral-800 text-white px-10 py-3.5 font-source_sans_pro text-sm tracking-wide uppercase transition-colors rounded-lg"
@@ -455,8 +451,8 @@ export const Home = () => {
       <Mission />
       <Affiliations />
       <MissionPillars />
-      <ScholarshipCTA />
       <EventsPreview />
+      <ScholarshipCTA />
       <AudienceLinks />
       <SupportBanner />
     </div>
