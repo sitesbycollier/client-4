@@ -25,7 +25,7 @@ export const MobileHeader = () => {
                     type="page"
                     className="box-border caret-transparent break-words no-underline"
                   >
-                    HOT SPRINGS MUSIC CLUB
+                    HOT SPRINGS MUSIC CONNECTION
                   </a>
                 </h3>
               </div>

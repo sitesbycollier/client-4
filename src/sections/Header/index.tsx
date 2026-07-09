@@ -55,9 +55,7 @@ export const Header = () => {
                       <p className="box-border caret-transparent outline-[3px] break-words no-underline">
                         <strong className="box-border caret-transparent text-zinc-600 font-bold outline-[3px] break-words no-underline">
                           If you have interested and qualified students, please
-                          pass the enclosed information on to them. Students can
-                          also download the forms at
-                          hotspringsmusicclub.com/scholarships. Feel free to
+                          pass the enclosed information on to them. Feel free to
                           make more copies if needed and contact us if you have
                           any further questions. 
                         </strong>
@@ -273,7 +271,7 @@ export const Header = () => {
                   <div className="box-border caret-transparent leading-6 max-w-full outline-[3px] break-words no-underline my-2 py-0.5">
                     <p className="box-border caret-transparent text-[13px] leading-[19.5px] outline-[3px] break-words text-center no-underline">
                       <span className="box-border caret-transparent text-neutral-400 outline-[3px] break-words no-underline">
-                        Copyright © 2025 Hot Springs Music Club - All Rights
+                        Copyright © 2025 Hot Springs Music Connection - All Rights
                         Reserved.
                       </span>
                       <span className="box-border caret-transparent outline-[3px] break-words no-underline">

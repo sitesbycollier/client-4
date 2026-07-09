@@ -45,7 +45,7 @@ const Letter = () => (
           Dear Music Teachers and Guidance Counselors,
         </p>
         <p className="text-navy/65 leading-relaxed mb-4 font-source_sans_pro">
-          The Hot Springs Music Club will be awarding scholarships to Garland
+          Hot Springs Music Connection will be awarding scholarships to Garland
           County students who are seeking — or plan to seek — a music-related
           degree at any accredited institution of higher education.
         </p>
@@ -218,7 +218,7 @@ const PastRecipients = () => (
           Scholarship Recipients
         </h2>
         <p className="text-navy/60 max-w-2xl mx-auto leading-relaxed font-source_sans_pro">
-          Dr. Tom Bolton, President of the Hot Springs Music Club, announced
+          Dr. Tom Bolton, President of Hot Springs Music Connection, announced
           that the organization awarded college music scholarships for the
           2026–2027 academic year. Two applicants were successful in their
           auditions.

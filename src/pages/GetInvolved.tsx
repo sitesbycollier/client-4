@@ -141,7 +141,7 @@ export const GetInvolved = () => {
                 One Place to Join and Support
               </h2>
               <p className="text-navy/65 leading-relaxed mb-5 font-source_sans_pro">
-                For over 75 years, the Hot Springs Music Club has relied on
+                For over 75 years, the Hot Springs Music Connection has relied on
                 members, donors, and local partners to sustain scholarships and
                 music opportunities for students.
               </p>
@@ -251,8 +251,8 @@ export const GetInvolved = () => {
             Make a Donation
           </h2>
           <p className="text-cream/65 leading-relaxed mb-12 max-w-2xl mx-auto font-source_sans_pro">
-            Every contribution, regardless of size, helps the Hot Springs Music
-            Club continue its mission of supporting young musicians. Gifts may
+            Every contribution, regardless of size, helps Hot Springs Music
+            Connection continue its mission of supporting young musicians. Gifts may
             be made in memory or honor of a loved one who supported music
             education.
           </p>

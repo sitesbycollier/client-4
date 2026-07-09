@@ -174,7 +174,7 @@ const PageHero = () => (
     <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent" />
     <div className="relative z-10 max-w-4xl mx-auto px-4">
       <p className="text-white/80 tracking-[0.25em] uppercase text-xs font-source_sans_pro mb-3 drop-shadow">
-        Hot Springs Music Club
+        Hot Springs Music Connection
       </p>
       <h1 className="font-playfair text-5xl md:text-6xl text-white mb-4 drop-shadow-lg">
         Music Education
@@ -198,7 +198,7 @@ const Intro = () => (
       </h2>
       <div className="w-14 h-0.5 bg-gold mx-auto mb-8" />
       <p className="text-navy/65 leading-relaxed max-w-2xl mx-auto font-source_sans_pro">
-        The Hot Springs Music Club lists teachers who are members of the club.
+        The Hot Springs Music Connection lists teachers who are members of the club.
         Whether you&#39;re beginning your musical journey or preparing for
         competitive auditions, these instructors can help you reach your goals.
       </p>

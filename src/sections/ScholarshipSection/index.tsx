@@ -33,8 +33,7 @@ export const ScholarshipSection = () => {
             <p className="box-border caret-transparent outline-[3px] break-words no-underline">
               <strong className="box-border caret-transparent text-zinc-600 font-bold outline-[3px] break-words no-underline">
                 If you have interested and qualified students, please pass the
-                enclosed information on to them. Students can also download the
-                forms at hotspringsmusicclub.com/scholarships. Feel free to make
+                enclosed information on to them. Feel free to make
                 more copies if needed and contact us if you have any further
                 questions. 
               </strong>
