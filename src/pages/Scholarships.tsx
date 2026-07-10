@@ -170,7 +170,7 @@ const ApplicationDownload = () => (
         additional copies for qualified students.
       </p>
       <a
-        href="assets/docs/Scholarship_Application_2027.docx"
+        href="/assets/docs/Scholarship_Application_2027.docx"
         download="HSMC-Scholarship-Application-2027.docx"
         className="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 text-white px-10 py-5 font-source_sans_pro tracking-wide transition-colors rounded-lg"
       >

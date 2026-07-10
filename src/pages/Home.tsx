@@ -72,11 +72,11 @@ const Affiliations = () => (
         {[
           {
             name: "National Federation of Music Clubs",
-            logo: "assets/images/NFMC.png",
+            logo: "/assets/images/NFMC.png",
           },
           {
             name: "Arkansas Federation of Music Clubs",
-            logo: "assets/images/FMC.png",
+            logo: "/assets/images/FMC.png",
           },
         ].map((affiliation) => (
           <div

@@ -270,7 +270,7 @@ const PresidentBio = () => (
         <div className="md:w-64 shrink-0 mb-8 md:mb-0">
           <div className="bg-cream-dark border-t-4 border-burgundy p-6 text-center">
             <img
-              src="assets/images/Tom.png"
+              src="/assets/images/Tom.png"
               alt="Dr. Tom Bolton"
               className="h-28 w-28 object-cover mx-auto mb-5 bg-navy/10"
             />

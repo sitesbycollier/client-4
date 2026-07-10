@@ -91,37 +91,37 @@ const PROGRAM_DOWNLOADS = [
   {
   title: "A New Name, A New Vision",
   filename: "Program 25-09-07.pdf",
-  href: "assets/docs/Program 25-09-07.pdf",
+  href: "/assets/docs/Program 25-09-07.pdf",
   },
   {
   title: "October Interludes: A Chamber Music Celebration",
   filename: "Program 25-10-05.pdf",
-  href: "assets/docs/Program 25-10-05.pdf",
+  href: "/assets/docs/Program 25-10-05.pdf",
   },
   {
   title: "Her Sound, Her Story: Music by American Women",
   filename: "Program 25-11-09.pdf",
-  href: "assets/docs/Program 25-11-09.pdf",
+  href: "/assets/docs/Program 25-11-09.pdf",
   },
   {
   title: "Founders Day Jubilee: 75 Years of Music and Meaning",
   filename: "Program 26-01-11.pdf",
-  href: "assets/docs/Program 26-01-11.pdf",
+  href: "/assets/docs/Program 26-01-11.pdf",
   },
   {
   title: "Sanctuary of Sound: Music for the Church",
   filename: "Program 26-03-15.pdf",
-  href: "assets/docs/Program 26-03-15.pdf",
+  href: "/assets/docs/Program 26-03-15.pdf",
   },
   {
   title: "Sound in Motion: Dance to the Music",
   filename: "Program 26-04-12.pdf",
-  href: "assets/docs/Program 26-04-12.pdf",
+  href: "/assets/docs/Program 26-04-12.pdf",
   },
   {
   title: "Spotlight on Excellence: Recital of Honor Students",
   filename: "Program 26-05-03.pdf",
-  href: "assets/docs/Program 26-05-03.pdf",
+  href: "/assets/docs/Program 26-05-03.pdf",
   },
 ];
 
