@@ -53,6 +53,12 @@ const MEMBER_TEACHERS = [
     specialties: "Violin",
   },
   {
+    name: "Kristen Bomberger",
+    email: "kbbomberger@gmail.com",
+    phones: ["(501) 463-1475"],
+    specialties: "Violin",
+  },
+  {
     name: "Jolene Williams",
     email: "jolenewilliams.pianoandvoice@gmail.com",
     phones: ["(501) 545-6374"],
@@ -198,9 +204,10 @@ const Intro = () => (
       </h2>
       <div className="w-14 h-0.5 bg-gold mx-auto mb-8" />
       <p className="text-navy/65 leading-relaxed max-w-2xl mx-auto font-source_sans_pro">
-        The Hot Springs Music Connection lists teachers who are members of the club.
-        Whether you&#39;re beginning your musical journey or preparing for
-        competitive auditions, these instructors can help you reach your goals.
+        The Hot Springs Music Connection lists teachers who are members of the
+        connection. Whether you&#39;re beginning your musical journey or preparing
+        for competitive auditions, these instructors can help you reach your
+        goals.
       </p>
     </div>
   </section>

@@ -310,7 +310,7 @@ const EventsPreview = () => (
           },
           {
             title: "Junior Festival",
-            date: "2027 Date TBA",
+            date: "February 20, 2027",
             details: "Westminster Presbyterian Church, 3819 Central Avenue.",
           },
           {

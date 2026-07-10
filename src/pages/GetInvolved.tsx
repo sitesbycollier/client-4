@@ -36,7 +36,7 @@ const MEMBERSHIP_STEPS = [
   {
     icon: CheckCircle,
     step: "4",
-    title: "We&#39;ll Be in Touch",
+    title: "We'll Be in Touch",
     description:
       "A club representative will follow up with you about next steps and upcoming HSMC-sponsored program dates.",
   },

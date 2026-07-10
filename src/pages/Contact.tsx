@@ -200,7 +200,11 @@ const FederationLinks = () => (
           {
             name: "National Federation of Music Clubs",
             url: "https://www.nfmc-music.org",
-          }
+          },
+          {
+            name: "Arkansas Federation of Music Clubs",
+            url: "https://www.arkansasfmc.org/",
+          },
         ].map(({ name, url }) => (
           <a
             key={name}

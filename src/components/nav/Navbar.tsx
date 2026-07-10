@@ -60,11 +60,11 @@ export const Navbar = () => {
                 </NavLink>
               ))}
               <Link
-                to="/scholarships"
+                to="/get-involved"
                 className="ml-3 bg-black hover:bg-neutral-800 text-white text-sm font-source_sans_pro tracking-wide uppercase px-5 py-2 transition-colors rounded-lg"
                 style={{ whiteSpace: "nowrap" }}
               >
-                Apply Now
+                Join Now
               </Link>
             </nav>
 
