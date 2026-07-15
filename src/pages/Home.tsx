@@ -207,6 +207,7 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "St. Luke's Episcopal Church Parish Hall",
     address: "228 Spring Street",
+    image: "/assets/images/Sep-13.png",
   },
   {
     title: "A Chamber Music Sampler",
@@ -214,6 +215,7 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "St. Mary of the Springs Catholic Church Parish Hall",
     address: "100 Central Avenue",
+    image: "/assets/images/Oct-11.png",
   },
   {
     title: "Sounds of the American Spirit",
@@ -221,6 +223,7 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "First United Methodist Church Cupp Hall",
     address: "1100 Central Avenue",
+    image: "/assets/images/Nov-8.png",
   },
   {
     title: "A Heritage of Sound: 1000 Years of Music in Hot Springs",
@@ -228,6 +231,7 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "Place TBA",
     address: "",
+    image: "/assets/images/Jan-10.png",
   },
   {
     title: "Mutual Admiration: SAI and HSMC",
@@ -235,13 +239,15 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "First Presbyterian Church",
     address: "213 Whittington Avenue",
+    image: "/assets/images/Feb-13.png",
   },
   {
     title: "Music of the Church: Where Faith Finds a Voice",
     date: "Sunday, March 14, 2027",
     time: "3:00 pm",
-    venue: "TBA",
-    address: "",
+    venue: "Christ of the Hills United Methodist Church",
+    address: "HSV",
+    image: "/assets/images/Mar-14.png",
   },
   {
     title: "From Highlands to Heartland: The Celtic Thread in American Song",
@@ -249,6 +255,7 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "TBA",
     address: "",
+    image: "/assets/images/Apr-25.png",
   },
   {
     title: "The Promise of Tomorrow: The Next Generation in Recital",
@@ -256,6 +263,7 @@ const PUBLIC_PROGRAMS = [
     time: "3:00 pm",
     venue: "Grand Avenue United Methodist Church",
     address: "841 Quapaw Avenue",
+    image: "/assets/images/May-16.png",
   },
 ];
 
@@ -276,27 +284,34 @@ const EventsPreview = () => (
         </div>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-        {PUBLIC_PROGRAMS.map(({ title, date, time, venue, address }) => (
+        {PUBLIC_PROGRAMS.map(({ title, date, time, venue, address, image }) => (
           <div
             key={title}
-            className="bg-cream-dark p-7 border-b-4 border-gold hover:shadow-md transition-shadow"
+            className="bg-cream-dark overflow-hidden border-b-4 border-gold hover:shadow-md transition-shadow"
           >
-            <span className="inline-block text-xs tracking-widest uppercase text-burgundy font-source_sans_pro bg-burgundy/10 px-2.5 py-1 mb-4">
-              Free Public Program
-            </span>
-            <h3 className="font-playfair text-xl text-navy mb-1">{title}</h3>
-            <p className="text-navy/70 text-sm font-source_sans_pro mb-3">
-              {time}, {date}
-            </p>
-            <p className="text-navy/55 text-sm leading-relaxed font-source_sans_pro">
-              {venue}
-              {address && (
-                <>
-                  <br />
-                  {address}
-                </>
-              )}
-            </p>
+            <img
+              src={image}
+              alt={`${title} program artwork`}
+              className="w-full aspect-[16/10] object-cover"
+            />
+            <div className="p-7">
+              <span className="inline-block text-xs tracking-widest uppercase text-burgundy font-source_sans_pro bg-burgundy/10 px-2.5 py-1 mb-4">
+                Free Public Program
+              </span>
+              <h3 className="font-playfair text-xl text-navy mb-1">{title}</h3>
+              <p className="text-navy/70 text-sm font-source_sans_pro mb-3">
+                {time}, {date}
+              </p>
+              <p className="text-navy/55 text-sm leading-relaxed font-source_sans_pro">
+                {venue}
+                {address && (
+                  <>
+                    <br />
+                    {address}
+                  </>
+                )}
+              </p>
+            </div>
           </div>
         ))}
       </div>

@@ -3,16 +3,10 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 
 const MEMBER_TEACHERS = [
   {
-    name: "Dr. Tish Kennedy Davenport",
-    email: "tishkennedydavenport@gmail.com",
-    phones: ["(480) 221-7854"],
-    specialties: "Piano, Flute",
-  },
-  {
-    name: "Karen Granderson",
-    email: "karen.granderson@gmail.com",
-    phones: ["(817) 689-3979"],
-    specialties: "Piano",
+    name: "Shelley Martin",
+    email: "shelley.e.martin@gmail.com",
+    phones: ["(501) 282-8145"],
+    specialties: "Flute, clarinet, saxophone, piano",
   },
   {
     name: "Diane Kesling",
@@ -21,22 +15,40 @@ const MEMBER_TEACHERS = [
     specialties: "Voice",
   },
   {
+    name: "Charlie Mink",
+    email: "Charliemink1042@gmail.com",
+    phones: ["(870) 213-5994"],
+    specialties: "Mountain dulcimer (loaners available)",
+  },
+  {
+    name: "Dr. Tish Kennedy Davenport",
+    email: "tishkennedydavenport@gmail.com",
+    phones: ["(480) 221-7854"],
+    specialties: "Piano, Flute",
+  },
+  {
+    name: "Jolene Williams",
+    email: "jolenewilliams.pianoandvoice@gmail.com",
+    phones: ["(501) 545-6374"],
+    specialties: "Piano, Voice",
+  },
+  {
+    name: "Karen Granderson",
+    email: "karen.granderson@gmail.com",
+    phones: ["(817) 689-3979"],
+    specialties: "Piano",
+  },
+  {
     name: "Kristen Marie La Madrid",
     email: "kristenmariemusic@yahoo.com",
     phones: ["(501) 463-0948"],
     specialties: "Piano",
   },
   {
-    name: "Shelley Martin",
-    email: "shelley.e.martin@gmail.com",
-    phones: ["(501) 282-8145"],
-    specialties: "Flute, clarinet, saxophone, piano",
-  },
-  {
-    name: "Charlie Mink",
-    email: "Charliemink1042@gmail.com",
-    phones: ["(870) 213-5994"],
-    specialties: "Mountain dulcimer (loaners available)",
+    name: "Lowella Cherry",
+    email: "rcherry@cablelynx.com",
+    phones: ["(501) 282-1731"],
+    specialties: "Piano",
   },
   {
     name: "Sigilda Naidin",
@@ -57,12 +69,6 @@ const MEMBER_TEACHERS = [
     email: "kbbomberger@gmail.com",
     phones: ["(501) 463-1475"],
     specialties: "Violin",
-  },
-  {
-    name: "Jolene Williams",
-    email: "jolenewilliams.pianoandvoice@gmail.com",
-    phones: ["(501) 545-6374"],
-    specialties: "Piano, Voice",
   },
 ];
 
