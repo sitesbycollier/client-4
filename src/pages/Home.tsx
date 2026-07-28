@@ -73,15 +73,21 @@ const Affiliations = () => (
           {
             name: "National Federation of Music Clubs",
             logo: "/assets/images/NFMC.png",
+            url: "https://www.nfmc-music.org/",
           },
           {
             name: "Arkansas Federation of Music Clubs",
             logo: "/assets/images/FMC.png",
+            url: "https://www.arkansasfmc.org/",
           },
         ].map((affiliation) => (
-          <div
+          <a
             key={affiliation.name}
-            className="bg-cream-dark border-l-4 border-burgundy p-6 flex flex-col items-center"
+            href={affiliation.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${affiliation.name}`}
+            className="bg-cream-dark border-l-4 border-burgundy p-6 flex flex-col items-center transition-shadow hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy focus-visible:ring-offset-4 focus-visible:ring-offset-cream"
           >
             <img
               src={affiliation.logo}
@@ -91,7 +97,7 @@ const Affiliations = () => (
             <p className="font-playfair text-xl text-navy">
               {affiliation.name}
             </p>
-          </div>
+          </a>
         ))}
       </div>
     </div>
