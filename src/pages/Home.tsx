@@ -217,7 +217,7 @@ const PUBLIC_PROGRAMS = [
   },
   {
     title: "A Chamber Music Sampler",
-    date: "Sunday, October 11, 2026",
+    date: "Sunday, October 18, 2026",
     time: "3:00 pm",
     venue: "St. Mary of the Springs Catholic Church Parish Hall",
     address: "100 Central Avenue",
@@ -235,8 +235,8 @@ const PUBLIC_PROGRAMS = [
     title: "A Heritage of Sound: 1000 Years of Music in Hot Springs",
     date: "Sunday, January 10, 2027",
     time: "3:00 pm",
-    venue: "Place TBA",
-    address: "",
+    venue: "Grand Avenue Methodist Church",
+    address: "841 Quapaw Avenue",
     image: "/assets/images/Jan-10.png",
   },
   {
@@ -259,8 +259,8 @@ const PUBLIC_PROGRAMS = [
     title: "From Highlands to Heartland: The Celtic Thread in American Song",
     date: "Sunday, April 25, 2027",
     time: "3:00 pm",
-    venue: "TBA",
-    address: "",
+    venue: "Garland County Public Library Auditorium",
+    address: "1427 Malvern Avenue",
     image: "/assets/images/Apr-25.png",
   },
   {
